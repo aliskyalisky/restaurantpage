@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    position: fixed;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    font-size: 30px;
+    background-color: white;
+    z-index: 500;
+}
+
+.content {
+    background-color: white;
+}
+
+
+.headerlogo {
+    color: #F68989;
+    cursor: pointer;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;   
+}
+
+.navlink, .navlink button {
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    color: #404040;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.navlink button:hover {
+    color: #F68989;
+    
+}
+
+.floatlogo {
+    position: fixed;
+    height: auto;
+    width: 90vw;
+    animation-name: glow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform: translateX(30px) translateY(10vh);
+    z-index: 499;
+}
+
+.floatmenu {
+    position: absolute;
+    height: auto;
+    width: 90vw;
+    right: 5vw;
+    animation-name: glow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform: translateX(30px) translateY(15vh);
+    z-index: 499;
+}
+
+@keyframes glow {
+    0% {filter: blur(10px)}
+    25% {filter: blur(0)}
+    50% {filter: blur(15px)}
+    75% {filter: blur(5px)}
+    100% {filter: blur(10px)}
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+
+.images img {
+    height: auto;
+    width: 88vw;
+    margin: 4vw 0px;
+    filter: grayscale(100%) invert();
+    z-index: 1;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menubanner {
+    position: absolute;
+    right: 6vw;
+    height: auto;
+    width: 88vw;
+    margin: 4vw 0px;
+    filter: grayscale(100%) invert();
+    z-index: 1;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.bgtext .bgtext1{
+    position: fixed;
+    top: 50vh;
+    right: 100px;
+    z-index: 1;
+    color: #F68989;
+    font-size: 25px;
+}
+
+.bgtext .bgtext2{
+    position: fixed;
+    top: 80vh;
+    left: 100px;
+    z-index: 1;
+    color: #F68989;
+    font-size: 30px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 500px;
+}
+
+.starters, .mains, .drinks {
+    position: relative;
+    width: 100vw;
+    min-height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.dishcard {
+    width: 300px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.dishcard p {
+    margin-top: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #F68989;
+}
+
+
+
+.starters h2, .mains h2, .drinks h2 {
+    text-align: center;
+    width: 10px;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    letter-spacing: 10px;
+}
+
+.infobox {
+    width: 88vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 500px;
+    margin-left: 6vw;
+    text-align: center;
+    gap: 30px;
+    padding: 50px 10px;
+}
+
+.infomap {
+    filter: grayscale(100%);
+    outline: 2px inset black;
+    border: none;
+    width: 400px;
+    height: 300px;
+}
+
+.infobox button {
+    border: none;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+}
+
+.infobox button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
